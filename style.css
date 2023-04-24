@@ -1,0 +1,132 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+h5{
+  font-family: Epilogue;
+}
+p{
+  font-family: Inter;
+}
+[type="radio"]:checked+label:after {
+background-color: #4A9C81;
+border: 2px solid #4A9C81;
+
+}
+.bottom{
+  margin-bottom: 0px !important;
+  position: relative;
+}
+.color{
+  background-color: #f2f2f2;
+}
+.top{
+  padding: 30px;
+}
+.inputstyle{
+  display: inline-block;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  font-family: Inter ;
+}
+.inputstyleslidertwo{
+  display: inline-block;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 11px;
+  font-family: Inter;
+}
+.font{
+    font-family: Inter;
+}
+.line{
+  border-bottom: none;
+  font-family: Epilogue;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 50%;
+    flex-grow: 0;
+  }
+  .input{
+    display: inline-block;
+    border: 1px solid lightgrey;
+    border-radius: 25px;padding: 10px;
+    margin: 11px;
+    font-family: Inter;
+  }
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .button{
+    background-color: #4A9C81;
+    font-family: Inter;
+  }
+  td{
+    font-family: Inter;
+  }
+  .but{
+    background-color: white;
+    color: black;
+    outline: none;
+    border: none;
+  }
+  .circle-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .field {
+    margin-bottom: 10px;
+  }
+  .box{
+    position: relative;
+  }
+  .boxstyle{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 2%;
+    
+  }
+  .boxstyle1{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 100%;
+    padding: 2% 5% 2% 0;
+  }
+  .circle {
+    width: 100px;
+    height: 10px;
+    border-radius: 5px !important;
+    margin: 5px;
+    background-color: gray;
+  }
+  
+  .greens {
+    background-color: rgb(74, 156, 129) !important;
+  }
+  
+  #content2{
+    width: 100%;
+  }
+.blue {
+    color: #4A9C81;
+  }
+  

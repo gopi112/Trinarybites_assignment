@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.0/css/swiper.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .solidborder{
+            box-shadow: 0 0px 0px rgba(0,0,0,0.16), 0 0px 2px rgba(0,0,0,0.23);
+            }
+        h3, h5{
+            font-family: Epilogue;
+        }
+        p{
+            font-family: Inter;
+        }
+        .field-icon {
+        float: right;
+        margin-left: -25px;
+        margin-top: -25px;
+        position: relative;
+        z-index: 2;
+        }
+        .omb_loginOr .omb_spanOr {
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: -0.6em;
+            margin-left: -1.5em;
+            background-color: white;
+            width: 3em;
+            text-align: center;
+        }			
+        .omb_loginOr .omb_hrOr {
+            background-color: #cdcdcd;
+            height: 1px;
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+        }
+        .omb_loginOr {
+            position: relative;
+            font-size: 1.5em;
+            color: #aaa;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+        .swiper-pagination-bullet{
+            width: 12px;
+            height: 12px;
+            opacity: 0.8;
+        }
+    </style>
+    <script>
+        // $(".toggle-password").click(function() {
+
+        //     $(this).toggleClass("fa-eye fa-eye-slash");
+        //     var input = $($(this).attr("toggle"));
+        //     if (input.attr("type") == "password") {
+        //     input.attr("type", "text");
+        //     } else {
+        //     input.attr("type", "password");
+        //     }
+        // });
+
+        // $(document).ready(function () {
+        //     //initialize swiper when document ready  
+        //     var mySwiper = new Swiper ('.swiper-container', {
+        //         // Optional parameters
+        //         direction: 'horizontal',
+        //         loop: true,
+        //         pagination: '.swiper-pagination',
+        //         paginationClickable: true,
+        //         nextButton: '.swiper-button-next',
+        //         prevButton: '.swiper-button-prev',
+        //         mousewheelControl: true,
+        //         keyboardControl: true,
+        //     })        
+        // });
+        
+      
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+  // User data for authentication
+            const userData = [
+  { username: "user1", password: "password" },
+  { username: "user2", password: "password" },
+  { username: "user3", password: "password" },
+];
+
+// Login form submission
+const loginForm = document.querySelector("#login-form");
+loginForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const username = document.querySelector("#username").value;
+  const password = document.querySelector("#password").value;
+
+  // Check if user data matches
+  const userDataMatch = userData.find(
+    (user) => user.username === username && user.password === password
+  );
+
+  if (userDataMatch) {
+    // Redirect to home page or perform other actions here
+    window.location.href = "index.html";
+  } else {
+    alert("Invalid username or password.");
+  }
+});
+
+
+        });
+
+
+
+    </script>
+</head>
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-md-6" style="background-color: #f2f2f2 ; ">
+                <!-- <img src="" alt="img"> -->
+                <h5>
+                    Enhance Your <br>
+                    Entrepreneurial Journey <br>
+                    with SME Hub!
+                </h5>
+                <p> Enter your credentials to access your account!</p> 
+
+                <img src="login.png" alt="image" style="position: relative; width:100%; ">
+
+                <footer class=" border-top">
+                    <div class="container-fluid mt-3">
+                      <div class="row">
+                        <div class="col-md-6" style="padding: 2px; ">
+                            <span style="font-family:Inter ;">&#169; The SME Hub</span>
+                        </div>
+                        <div class="col-md-6 " style="text-align: right; padding: 2px;">
+                            <span>&#x2709; hello@smehub.net </span>  
+                        </div>
+                      </div>
+                    </div>
+                </footer>
+                
+            </div>
+
+            <div class="col-md-6" style="padding : 25px 25px 25px 25px; ">
+
+                <h3 >Login To Your Account</h3> <br>
+
+                <form id="login-form">
+                    <!-- <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" placeholder="Enter Your Email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" placeholder="Enter Your Password" id="exampleInputPassword1">
+                      <span class="input-group-addon" role="button" title="veiw password" id="passBtn">
+                        <i class="fa fa-eye fa-fw" aria-hidden="true"></i>
+                      </span>
+
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="button">Submit</button>
+                        
+                    </div>
+                     -->
+                     <div class="col-md-12 mt-3 align-center">
+                        <label for="username" class="form-label" >Email address</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter Your email *" name="email">
+                        <div class="text-danger email"></div>
+                      </div>
+                      <div class="col-md-12 mt-3 align-center">
+                        <label for="password" class="form-label" >Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Create your password *" name="password" >
+                        <div class="text-danger password
+                        "></div>
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                      </div>
+                      <p style="text-align: right;" class="mb-3">
+                        Forget your password? <a href="resetpwd" style="text-decoration: none; color: black;"><b style="font-family: Inter;">Reset Password</b></a>
+                      </p>
+                      <div class="d-grid gap-2 mt-5">
+                        <button class="btn btn-primary" type="submit" id="login-button" style="background-color: #4A9C81; font-family: Inter;">Login
+                        </button>
+                        
+                    </div>
+                </form>
+
+                <div class="row omb_row-sm-offset-3 omb_loginOr">
+                    <div class="col-xs-12 col-sm-6">
+                        <hr class="omb_hrOr">
+                        <span class="omb_spanOr">or</span>
+                    </div>
+                </div>
+
+                <div>Login With:</div>
+
+                <div class="row omb_row-sm-offset-3  mt-3">
+                    <div class="col-md-4 ">
+                        <a href="#" class="btn btn-lg btn-block omb_btn-twitter solidborder">
+                            <i class="fa fa-linkedin visible-xl" style="color: white;background-color: #0077b5;width: 25px;height: 25px;border-radius: 0.1rem;font-size: 24px;"></i>
+                            <span class="hidden-xs">linkdln</span>
+                        </a>
+                    </div>	
+                    <div class="col-md-4 ">
+                        <a href="#" class="btn btn-lg btn-block omb_btn-google solidborder">
+                            <i class="fa fa-google visible-xs" style="color: #50c7c7;"></i>
+                            <span class="hidden-xs">Google</span>
+                        </a>
+                    </div>	
+                    <div class="col-md-4 s">
+                        <a href="#" class="btn btn-lg btn-block omb_btn-facebook solidborder">
+                            <i class="fa fa-facebook visible-xs"></i>
+                            <span class="hidden-xs">Facebook</span>
+                        </a>
+                    </div>
+                    
+                    <p>
+                        <center>
+                            Don't have a <b>SME HUB</b> account?<a href="signup" style="color: #4A9C81; text-decoration: none;">Sign up</a>
+                        </center>
+                    </p>
+                    
+                    <p>
+                        By creating account you agree to our <span style="color: #4A9C81;">Terms</span> of services.
+                    </p>
+
+                </div>
+        
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.0/js/swiper.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
